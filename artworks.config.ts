@@ -15,6 +15,13 @@ export const artworks: Artwork[] = [
     year: 2026,
     height: 420,
   },
+  {
+    slug: 'neuron',
+    title: '神经元',
+    tags: ['Canvas', 'Interactive', 'Simulation'],
+    year: 2026,
+    height: 500,
+  },
 ]
 
 export function getArtwork(slug: string): Artwork | undefined {

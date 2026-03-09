@@ -17,8 +17,8 @@ export default function ArtworkCard({ artwork }: { artwork: Artwork }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Preview — only mounted on hover */}
-      {hovered && Preview && (
+      {/* Preview — always running */}
+      {Preview && (
         <div className="absolute inset-0">
           <Preview />
         </div>
@@ -26,13 +26,13 @@ export default function ArtworkCard({ artwork }: { artwork: Artwork }) {
 
       {/* Title + tags — fades out on hover */}
       <div
-        className="absolute bottom-0 left-0 right-0 p-5 transition-opacity duration-200"
+        className="absolute bottom-0 left-0 right-0 p-5 transition-opacity duration-300"
         style={{ opacity: hovered ? 0 : 1 }}
       >
-        <p className="text-sm font-medium text-neutral-900 tracking-tight">
+        <p className="text-sm font-medium text-white tracking-tight">
           {artwork.title}
         </p>
-        <p className="mt-0.5 text-xs text-neutral-400">
+        <p className="mt-0.5 text-xs text-white/50">
           {artwork.tags.join(' · ')}
         </p>
       </div>
