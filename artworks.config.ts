@@ -16,6 +16,13 @@ export const artworks: Artwork[] = [
     height: 420,
   },
   {
+    slug: 'particle-dust',
+    title: '粒子尘埃',
+    tags: ['WebGPU', 'Interactive', 'Physics'],
+    year: 2026,
+    height: 500,
+  },
+  {
     slug: 'neuron',
     title: '神经元',
     tags: ['Canvas', 'Interactive', 'Simulation'],
